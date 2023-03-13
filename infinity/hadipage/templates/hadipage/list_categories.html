@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% for c in cats %}
+<ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          {% if c.pk == cat_selected %}
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="">
+              <h4>{{c.name}}</h4>
+            </a>
+          </li><!-- End tab nav item -->
+          {% else %}
+          <li><a href="{{ c.get_absolute_url }}">{{c.name}}</a></li>
+{% endif %}
+          </ul>
+{% endfor %}

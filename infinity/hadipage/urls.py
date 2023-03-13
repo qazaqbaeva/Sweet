@@ -3,10 +3,10 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('', index, name='home'),
-    path('about/', about, name='about'),
-    path('contact/',contact,name='contact'),
-path('category/',category,name='category'),
-path('single/',single,name='single'),
+    path('',ZavedeinyaHome.as_view(), name='home'),
+    path('addpage/', AddPage.as_view(), name='add_page'),
+    path('category/<slug:cat_slug>/',ZavedeniyaCategory.as_view(),name='category'),
+    path('post/<slug:post_slug>/',ShowPost.as_view(),name='post')
+
 
 ]

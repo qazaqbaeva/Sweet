@@ -26,7 +26,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('hadipage.urls')),
-    re_path(r'^archive/(?P<year>[0-9]{4})/',archive)
+
 
 ]
 
