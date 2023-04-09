@@ -48,14 +48,25 @@
           <li><a href="#about">Біз туралы</a></li>
           <li><a href="#stats-counter">Аналитика</a></li>
           <li><a href="#menu">Барлық шолулар</a></li>
-          <li><a href="#chefs">Үздіктер қызметкерлер</a></li>
+          <li><a href="#chefs">Үздіктер қызметкерлер</a>
+            {% for m in menu %}
+			<li><a href="{% url m.url_name %}">{{m.title}}</a></li>
+{% endfor %}
+          {% if request.user.is_authenticated %}
+          <li>{{user.username}} | <a class="btn-book-a-table" href="{% url 'logout' %}">Quit</a></li>
 
+          {% else %}
+          <li>
+            <a class="btn-book-a-table" href="{% url 'register' %}">Тіркелу</a></li>
+          <li>
+            <a class="btn-book-a-table" href="{% url 'login' %}">Кіру</a>
+
+          {% endif %}
         </ul>
       </nav><!-- .navbar -->
 
-      <a class="btn-book-a-table" href="#book-a-table">Book a Table</a>
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+
 
     </div>
   </header><!-- End Header -->
@@ -208,6 +219,32 @@
           </div><!-- End Starter Menu Content -->
 {% block content %}
 {% endblock %}
+          <nav class="list-pages">
+            <ul>
+              {% if page_obj.has_previous %}
+              <li class="page-num">
+                <a href="?page={{page_obj.previous_page_number}}">&lt;</a>
+              </li>
+              {% endif %}
+              {% for p in paginator.page_range %}
+              {% if page_obj.number == p %}
+              <li class="page-num page-num-selected">{{p}}</li>
+              {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}
+              <li class="page-num">
+                <a href="?page={{p}}">{{p}}</a>
+              </li>
+              {% endif %}
+              {% endfor %}
+               {% if page_obj.has_next %}
+              <li class="page-num">
+                <a href="?page={{page_obj.next_page_number}}">&gt;</a>
+              </li>
+              {% endif %}
+            </ul>
+          </nav>
+          <!--          {% if page_obg.page_range %}-->
+
+<!--          {% endif %}-->
     <!-- ======= Chefs Section ======= -->
     <section id="chefs" class="chefs section-bg">
       <div class="container" data-aos="fade-up">
