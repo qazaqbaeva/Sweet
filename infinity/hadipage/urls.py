@@ -5,11 +5,11 @@ from .views import *
 
 urlpatterns = [
     path('',ZavedeinyaHome.as_view(), name='home'),
-    path('addpage/', AddPage.as_view(), name='add_page'),
+    path('addpage/', addpage, name='add_page'),
     path('login/',LoginUser.as_view(),name='login'),
     path('logout/', logout_user, name='logout'),
     path('register/',RegisterUser.as_view(),name='register'),
-    path('category/<slug:cat_slug>/',ZavedeniyaCategory.as_view(),name='category'),
+    path('category/<slug:category_slug>/',ZavedeniyaCategory.as_view(),name='category'),
     path('post/<slug:post_slug>/',ShowPost.as_view(),name='post'),
     path('about/', about, name='about'),
     path('contact/',ContactFormView.as_view(),name='contact')
