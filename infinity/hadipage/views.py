@@ -20,7 +20,7 @@ menu = [
 #     {'title': "Войти", 'url_name': 'login'
 
 class ZavedeinyaHome(ListView):
-    paginate_by = 2
+    paginate_by = 3
     model = zavedeniya
     template_name = 'hadipage/index.html'
     context_object_name = 'posts'
@@ -61,28 +61,28 @@ def about(request):
     return render(request, 'hadipage/about.html', {'page_obj':page_obj,'menu': menu, 'title':'О сайте'})
 
 
-class ShowPost(DataMixin,DetailView):
-    model = zavedeniya
-    template_name = 'zavedeniya/post.html'
-    slug_url_kwarg = 'post_slug'
-    context_object_name = 'post'
+# class ShowPost(DataMixin,DetailView):
+#     model = zavedeniya
+#     template_name = 'zavedeniya/post.html'
+#     slug_url_kwarg = 'post_slug'
+#     context_object_name = 'post'
+#
+#     def get_context_data(self, **kwargs):
+#         context=super().get_context_data(**kwargs)
+#         c_def = self.get_user_context(title=context['post'])
+#         return dict(list(context.items())+list(c_def.items()))
 
-    def get_context_data(self, **kwargs):
-        context=super().get_context_data(**kwargs)
-        c_def = self.get_user_context(title=context['post'])
-        return dict(list(context.items())+list(c_def.items()))
 
 
-
-# def show_post(request,post_slug):
-#     post=get_object_or_404(zavedeniya,slug=post_slug)
-#     context = {
-#         'post': post,
-#         'menu': menu,
-#         'title':post.title,
-#         'cat_selected':post.category_id,
-#     }
-#     return render(request, 'hadipage/post.html', context=context)
+def show_post(request,post_slug):
+    post=get_object_or_404(zavedeniya,slug=post_slug)
+    context = {
+        'post': post,
+        'menu': menu,
+        'title':post.title,
+        'cat_selected':post.category_id,
+    }
+    return render(request, 'hadipage/post.html', context=context)
 
 class ZavedeniyaCategory(ListView):
     paginate_by = 3
@@ -131,7 +131,7 @@ def badRequest400(request,exceprion):
 def serverError500(request):
     return HttpResponseServerError('<h1>Сервер столкнулся с неожиданной ошибкой</h1>')
 
-
+#
 # def show_category(request, cat_id):
 #     posts = zavedeniya.objects.filter(category_id=cat_id)
 #

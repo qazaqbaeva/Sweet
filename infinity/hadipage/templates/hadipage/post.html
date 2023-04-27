@@ -6,7 +6,8 @@
 {% if post.photo%}
 <p><img src="{{post.photo.url}}" alt=""></p>
 {% endif %}
-
-
+<h2>Мекеме жайлы: </h2>
 {{post.content}}
+<h3>Сертификаттар:</h3>
+{{post.certificate}}
 {% endblock %}

@@ -45,10 +45,6 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#about">Біз туралы</a></li>
-          <li><a href="#stats-counter">Аналитика</a></li>
-          <li><a href="#menu">Барлық шолулар</a></li>
-          <li><a href="#chefs">Үздіктер қызметкерлер</a>
             {% for m in menu %}
 			<li><a href="{% url m.url_name %}">{{m.title}}</a></li>
 {% endfor %}
@@ -76,15 +72,15 @@
     <div class="container">
       <div class="row justify-content-between gy-5">
         <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
-          <h2 data-aos="fade-up">Enjoy Your Healthy<br>Delicious Food</h2>
-          <p data-aos="fade-up" data-aos-delay="100">Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum quaerat.</p>
+          <h2 data-aos="fade-up">Biz arqyly halal taǵam<br>  álemin ashyńyz!</h2>
+          <p data-aos="fade-up" data-aos-delay="100"> Біз оқырмандарымызға олардың діни талаптарына сәйкес келетін ең жақсы тамақтану орындарын табуға көмектесуге тырысамыз.</p>
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-            <a href="#book-a-table" class="btn-book-a-table">Book a Table</a>
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            <a href="#book-a-table" class="btn-book-a-table">Pikirlerdi qarau</a>
+            <a href="" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Beıneni qarau</span></a>
           </div>
         </div>
         <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-          <img src="{% static 'hadipage/assets/img/hero-img.png'%}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+          <img src="{% static 'hadipage/assets/img/zac.png' %}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
         </div>
       </div>
     </div>
@@ -97,8 +93,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>About Us</h2>
-          <p>Learn More <span>About Us</span></p>
+          <h2>Біз жайлы</h2>
+          <p><span>Біз туралы</span> кобірек біл</p>
         </div>
 
         <div class="row gy-4">
@@ -108,19 +104,21 @@
           <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
             <div class="content ps-0 ps-lg-5">
               <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+                Біз   оқырмандарымызға   діни    сенімдеріне    сәйкес
+                келетін    дәмді    және    сапалы    тағамнан    ләззат    алатын
+                орынды    таңдауға    көмектесу    үшін    әлемдегі     мейрамханалар,
+                кафелер,    асханалар    және     басқа      да     орындардың     кең     шолуын    ұсынамыз.
               </p>
               <ul>
-                <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-              </ul>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-              </p>
+                Біздің шолуларымызда:
 
+                <li><i class="bi bi-check2-all"></i> мәзір</li>
+                <li><i class="bi bi-check2-all"></i> халал талаптарга сайкестігі</li>
+                <li><i class="bi bi-check2-all"></i> қызмет сапасы</li>
+                <li><i class="bi bi-check2-all"></i> мекеменің атмосферасы</li>
+
+                және ақпараттандырылған шешім қабылдауға көмектесетін басқа да маңызды аспектілер туралы ақпарат бар.
+              </ul>
 
             </div>
           </div>
@@ -139,28 +137,28 @@
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
               <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Clients</p>
+              <p>Клиенттер </p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
               <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
+              <p>Жобалар</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
               <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
+              <p>Қолдау көрсету сағаттары</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
               <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Workers</p>
+              <p>Жұмыскерлер</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -174,7 +172,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Our REVIEWS</h2>
+          <h2>Біздің пікірлер</h2>
 {% if cat_selected == 0 %}
           <p>Check Our <span>REVIEWS</span></p>
         </div>
@@ -193,7 +191,7 @@
           <div class="tab-pane fade active show" id="menu-starters">
 
             <div class="tab-header text-center">
-              <p>Menu</p>
+              <p>Шолулар</p>
 
 
             </div>
@@ -208,10 +206,16 @@
                 <p class="ingredients">
                   {{p.content}}
                 </p>
+
+                <p class="price">
+                 Сертификаттар:
+                </p>
+                {{p.certificate}}
                 <p class="price">
                  {{p.category}}
                 </p>
-                <a href="{{p.get_absolute_url}} ">MORE</a>
+
+                <a href="{{p.get_absolute_url}} ">Толығырақ</a>
               </div><!-- Menu Item -->
   {% endfor %}
             </div>
@@ -249,8 +253,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Chefs</h2>
-          <p>Our <span>Proffesional</span> Chefs</p>
+          <h2>Сарапшылар</h2>
+          <p>Біздін <span>Профессионалды</span> Сарапшылар</p>
         </div>
 
         <div class="row gy-4">
@@ -267,9 +271,9 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Master Chef</span>
-                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+                <h4>Tumar Togyssova</h4>
+                <span>Taster of food</span>
+                <p>Ол 10 жылдық тәжірибесі мен ойлау объективтілігі мен болжамдарында дәлдікке ие.</p>
               </div>
             </div>
           </div><!-- End Chefs Member -->
@@ -279,16 +283,15 @@
               <div class="member-img">
                 <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.instagram.com/qazaqbaewa/"><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Patissier</span>
-                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+                <h4>Baqdaulet Tursynkul</h4>
+                <span>CEO of iHadi</span>
+                <p>Ол 5 жылдық тәжірибесі мен ойлау объективтілігі мен болжамдарында дәлдікке ие.</p>
               </div>
             </div>
           </div><!-- End Chefs Member -->
@@ -305,9 +308,9 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>Cook</span>
-                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
+                <h4>Aigerim Madiomarova</h4>
+                <span>HR of iHadi</span>
+                <p>Ол 15 жылдық тәжірибесі мен ойлау объективтілігі мен болжамдарында дәлдікке ие.</p>
               </div>
             </div>
           </div><!-- End Chefs Member -->
@@ -328,10 +331,10 @@
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-geo-alt icon"></i>
           <div>
-            <h4>Address</h4>
+            <h4>Мекен-жай:</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022 - US<br>
+              Жандосов көшесі, 55<br>
+              Қазақстан, Алматы 050002 - KZ<br>
             </p>
           </div>
 
@@ -340,27 +343,17 @@
         <div class="col-lg-3 col-md-6 footer-links d-flex">
           <i class="bi bi-telephone icon"></i>
           <div>
-            <h4>Reservations</h4>
+            <h4>Байланыс: </h4>
             <p>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>Ұялы телефон:</strong> +7 771 771 76 79<br>
+              <strong>Email:</strong> hadipage@narxoz.kz<br>
             </p>
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 footer-links d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Opening Hours</h4>
-            <p>
-              <strong>Mon-Sat: 11AM</strong> - 23PM<br>
-              Sunday: Closed
-            </p>
-          </div>
-        </div>
 
         <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Follow Us</h4>
+          <h4>Бізге тіркеліңіз</h4>
           <div class="social-links d-flex">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -374,14 +367,14 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Yummy</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Asylkhan, Akgulim</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://bootstrapmade.com/">us</a>
       </div>
     </div>
 
