@@ -20,7 +20,7 @@ menu = [
 #     {'title': "Войти", 'url_name': 'login'
 
 class ZavedeinyaHome(ListView):
-    paginate_by = 3
+    paginate_by = 4
     model = zavedeniya
     template_name = 'hadipage/index.html'
     context_object_name = 'posts'

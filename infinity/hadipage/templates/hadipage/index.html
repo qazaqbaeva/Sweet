@@ -49,7 +49,7 @@
 			<li><a href="{% url m.url_name %}">{{m.title}}</a></li>
 {% endfor %}
           {% if request.user.is_authenticated %}
-          <li>{{user.username}} | <a class="btn-book-a-table" href="{% url 'logout' %}">Quit</a></li>
+          <li> {{user.username}} <br> <a class="btn-book-a-table" href="{% url 'logout' %}">Шығу</a></li>
 
           {% else %}
           <li>
@@ -75,8 +75,8 @@
           <h2 data-aos="fade-up">Biz arqyly halal taǵam<br>  álemin ashyńyz!</h2>
           <p data-aos="fade-up" data-aos-delay="100"> Біз оқырмандарымызға олардың діни талаптарына сәйкес келетін ең жақсы тамақтану орындарын табуға көмектесуге тырысамыз.</p>
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-            <a href="#book-a-table" class="btn-book-a-table">Pikirlerdi qarau</a>
-            <a href="" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Beıneni qarau</span></a>
+            <a href="#menu" class="btn-book-a-table">Pikirlerdi qarau</a>
+            <a href="#" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Beıneni qarau</span></a>
           </div>
         </div>
         <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
@@ -200,7 +200,7 @@
 
             <div class="row gy-5">
 {% for p in object_list %}
-              <div class="col-lg-4 menu-item">
+              <div class="col-lg-4 menu-item" style="margin-left:65px">
                 <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="{{p.photo.url}}" class="menu-img img-fluid" alt=""></a>
                 <h4>{{p.title}}</h4>
                 <p class="ingredients">
