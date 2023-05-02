@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
-    'hadipage.apps.HadipageConfig'
+    'hadipage.apps.HadipageConfig',
+    # 'rest_framework',
 ]
 
 MIDDLEWARE = [

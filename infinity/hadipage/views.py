@@ -1,5 +1,4 @@
 from urllib import request
-
 from django.contrib.auth import logout, login
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
@@ -10,6 +9,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, FormView
 from .forms import *
 from .models import *
+
 from .utils import DataMixin
 
 menu = [
@@ -19,8 +19,11 @@ menu = [
 #        {'title': "Обратная связь", 'url_name': 'contact'},
 #     {'title': "Войти", 'url_name': 'login'
 
+# class ZavedeniyaAPIView(generics.LastAPIView):
+#     queryset = zavedeniya.objects.all()
+#     serializer_clss=ZavedeniyaSerializer
 class ZavedeinyaHome(ListView):
-    paginate_by = 4
+    paginate_by = 2
     model = zavedeniya
     template_name = 'hadipage/index.html'
     context_object_name = 'posts'
@@ -87,7 +90,7 @@ def show_post(request,post_slug):
 class ZavedeniyaCategory(ListView):
     paginate_by = 3
     model = zavedeniya
-    template_name = 'zavedeniya/index.html'
+    template_name = 'hadipage/index.html'
     context_object_name = 'posts'
     # allow_empty = False
     def get_queryset(self):

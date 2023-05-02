@@ -39,12 +39,14 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+      <a href="{{home}}" class="logo d-flex align-items-center me-auto me-lg-0">
         <h1>iHadi<span>.</span></h1>
       </a>
 
       <nav id="navbar" class="navbar">
+
         <ul>
+
             {% for m in menu %}
 			<li><a href="{% url m.url_name %}">{{m.title}}</a></li>
 {% endfor %}
@@ -58,6 +60,8 @@
             <a class="btn-book-a-table" href="{% url 'login' %}">Кіру</a>
 
           {% endif %}
+           <li>
+            <a class="btn-book-a-table" href="{% url 'add_page' %}">Добавить пост</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -200,12 +204,10 @@
 
             <div class="row gy-2">
 {% for p in object_list %}
-              <div class="col-lg-4 menu-item" style="margin-left:65px">
+              <div class="col-lg-4 menu-item" style="margin-left:105px">
                 <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="{{p.photo.url}}" class="menu-img img-fluid" alt=""></a>
                 <h4>{{p.title}}</h4>
-                <p class="ingredients">
-                  {{p.content}}
-                </p>
+
 
                 <p class="price">
                  Сертификаттар:

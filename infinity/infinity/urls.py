@@ -11,6 +11,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('hadipage.urls')),
+    # path('api/v1/womenlist/',ZavedeniyaAPIView.as_view())
 
 
 ]
